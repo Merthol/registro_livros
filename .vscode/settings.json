@@ -1,0 +1,117 @@
+{
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1f1b2c",
+        "activityBar.foreground": "#dadada",
+        "activityBar.inactiveForeground": "#3b344f",
+        "sideBar.background": "#13121b",
+        "sideBarSectionHeader.background": "#191622",
+        "sideBar.foreground": "#dadada",
+        "terminal.background": "#191622",
+        "terminal.SectionHeader.bakground": "#191622",
+        "titleBar.activeBackground": "#191622",
+        "dropdown.background": "#191622",
+        "dropdown.listBackground": "#191622",
+        "dropdown.border": "#191622",
+        "dropdown.foreground": "#dadada",
+        "titleBar.activeForeground": "#dadada",
+        "input.background": "#191622",
+        "panel.background": "#191622",
+        "panel.border": "#b470a0",
+        "panelTitle.activeBorder": "#b470a0",
+        "panelTitle.inactiveForeground": "#7c7785",
+        "editor.background": "#1d1b22",
+        "editor.lineHighlightBorder": "#191622",
+        "editor.selectionBackground": "#393744",
+        },
+        "editor.tokenColorCustomizations": {
+            // "variables": "#d7e6e1",
+            "textMateRules": [
+                {
+                    "scope": [
+                        "punctuation.section.embedded.begin.php",
+                        "punctuation.section.embedded.end.php"
+                    ],
+                     "settings":{
+                        "foreground": "#7998ff",
+                    }
+                },
+                {
+                    "scope": "constant",
+                    "settings": {
+                        "foreground": "#562ec2",
+                    }
+                },
+                // Cores para HTML
+                {
+                    "scope": "meta.tag",
+                    "settings": {
+                        "foreground": "#fc6e6e", // Cor para a tag de abertura e fechamento
+                    }
+                },
+                {
+                    "scope": "text.html",
+                    "settings": {
+                        "foreground": "#96fc6e", // Cor para o conteúdo dentro das tags HTML
+                    }
+                },
+                {
+                    "scope": "text.html.basic",
+                    "settings": {
+                        "foreground": "#6ef7fc", // Cor para o conteúdo dentro das tags HTML
+                    }
+                },
+                {
+                    "scope": "text.html.html",
+                    "settings": {
+                        "foreground": "#6ed4fc", // Cor para tags inline HTML (como span, a, etc.)
+                    }
+                },
+                {
+                    "scope": "entity.name.tag.html",
+                    "settings": {
+                        "foreground": "#fc6e6e", // Cor para as tags HTML
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "entity.other.attribute-name.html",
+                    "settings": {
+                        "foreground": "#fcc36e", // Cor para os atributos das tags HTML
+                    }
+                },
+                {
+                    "scope": "entity.other.attribute-value.html",
+                    "settings": {
+                        "foreground": "#ff79c6",  // Cor para o valor do atributo style
+                    }
+                }
+            ]
+        },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "python.analysis.languageServerMode": "light",
+    "python.languageServer": "Pylance",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontVariations": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.lineHeight": 1.9,
+    "editor.snippetSuggestions": "top",
+}
