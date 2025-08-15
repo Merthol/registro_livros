@@ -1,10 +1,8 @@
 <?php
-require 'dados.php';
 
-$view = 'index';
+// echo "<pre>";
+// var_dump($_SERVER);
+// echo "</pre>";
 
-if ($uri = str_replace('/', '', $_SERVER['REQUEST_URI'])) {
-    $view = $uri;
-}
-
-require 'views/template/app.php';
+require 'functions.php'; // Carrega as funções auxiliares da aplicação
+require 'routes.php'; // Carrega as rotas da aplicação

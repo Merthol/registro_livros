@@ -7,5 +7,5 @@ $id = $_REQUEST['id'] ?? null;
 $filtrados = array_filter($livros, fn($livro) => $livro['id'] == $id);
 $livro = array_pop($filtrados); // Obtém o livro correspondente ao ID, se existir
 
-$view = "livro";
-require 'views/template/app.php'; // Carrega o template principal da aplicação
+view('livro', compact('livro')); // Carrega a view do livro
+// A função view() já inclui o template principal da aplicação, que renderiza a view solicitada
