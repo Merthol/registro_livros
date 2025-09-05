@@ -15,7 +15,7 @@ class DB
         $this->db = new PDO('sqlite:database.sqlite'); // Conecta ao banco de dados SQLite
     }
 
-    public function livros($id = null)
+    public function livros($pesquisa = null)
     {
         /**
          * Obtém todos os livros do banco de dados
@@ -24,7 +24,10 @@ class DB
          *
          * @return Livro[] Array de objetos Livro com os dados obtidos do banco de dados.
          */
-        $query = $this->db->query('SELECT * FROM livros'); // Executa uma consulta para obter todos os livros
+
+        $sql = "SELECT * FROM livros WHERE titulo LIKE '%$pesquisa%' OR autor LIKE '%$pesquisa%' OR descricao LIKE '%$pesquisa%'";
+
+        $query = $this->db->query($sql); // Executa uma consulta para obter todos os livros
         $itens = $query->fetchAll(); // Obtém os resultados como um array associativo
 
         return array_map(fn($item) => Livro::fromArray($item), $itens); // Mapeia os resultados para objetos Livro

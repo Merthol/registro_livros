@@ -7,10 +7,10 @@
 class Livro
 {
 
-    public $id;
-    public $titulo;
-    public $autor;
-    public $descricao;
+    public int $id;
+    public string $titulo;
+    public string $autor;
+    public string $descricao;
 
     // public function __construct($id, $titulo, $autor, $descricao)
     // {
